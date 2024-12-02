@@ -90,6 +90,7 @@
             color: #f1c40f;
             text-align: center;
             padding: 20px 0;
+            position: relative;
             margin-top: 30px;
         }
     </style>
@@ -132,33 +133,65 @@
         <!-- Electrónica -->
         <div class="row category-section" id="electronics">
             <h2>💻 Electrónica</h2>
-            ${createProducts([
-                { name: "Laptop HP", desc: "Ideal para trabajo y estudio.", img: "https://via.placeholder.com/150" },
-                { name: "Audífonos Sony", desc: "Sonido de alta calidad.", img: "https://via.placeholder.com/150" },
-                { name: "Monitor 4K", desc: "Para un detalle visual impresionante.", img: "https://via.placeholder.com/150" },
-                { name: "Teclado Mecánico", desc: "Experiencia de escritura superior.", img: "https://via.placeholder.com/150" },
-                { name: "Mouse Gaming", desc: "Precisión y velocidad.", img: "https://via.placeholder.com/150" }
-            ])}
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Laptop">
+                    <div class="card-body">
+                        <h5 class="card-title">Laptop HP</h5>
+                        <p class="card-text">Ideal para trabajo y estudio.</p>
+                        <a href="#" class="btn btn-category">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Audífonos">
+                    <div class="card-body">
+                        <h5 class="card-title">Audífonos Sony</h5>
+                        <p class="card-text">Sonido de alta calidad.</p>
+                        <a href="#" class="btn btn-category">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Monitor">
+                    <div class="card-body">
+                        <h5 class="card-title">Monitor 4K</h5>
+                        <p class="card-text">Detalles impresionantes.</p>
+                        <a href="#" class="btn btn-category">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Teclado">
+                    <div class="card-body">
+                        <h5 class="card-title">Teclado Mecánico</h5>
+                        <p class="card-text">Escritura precisa.</p>
+                        <a href="#" class="btn btn-category">Comprar</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <div class="card">
+                    <img src="https://via.placeholder.com/150" alt="Mouse">
+                    <div class="card-body">
+                        <h5 class="card-title">Mouse Gaming</h5>
+                        <p class="card-text">Rendimiento avanzado.</p>
+                        <a href="#" class="btn btn-category">Comprar</a>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Moda -->
-        <div class="row category-section" id="fashion">
-            <h2>👗 Moda</h2>
-            ${createProducts([
-                { name: "Vestido Elegante", desc: "Perfecto para eventos especiales.", img: "https://via.placeholder.com/150" },
-                { name: "Zapatos de Cuero", desc: "Estilo y comodidad.", img: "https://via.placeholder.com/150" },
-                { name: "Camisa Casual", desc: "Ideal para el día a día.", img: "https://via.placeholder.com/150" },
-                { name: "Bolso Moderno", desc: "Elegante y funcional.", img: "https://via.placeholder.com/150" },
-                { name: "Chaqueta de Invierno", desc: "Abrígate con estilo.", img: "https://via.placeholder.com/150" }
-            ])}
-        </div>
-
-        <!-- Más categorías con 5 productos cada una -->
+        <!-- Más categorías -->
+        <!-- Repite estructura de Electrónica para Moda, Hogar, Fitness y Belleza -->
     </div>
 
     <footer>
-        <p>&copy; 2024 ASFERDEALS | Todos los derechos reservados.</p>
         <p>🔗 Encuentra más ofertas exclusivas con nosotros. 💳</p>
+        <p>&copy; 2024 ASFERDEALS | Todos los derechos reservados.</p>
     </footer>
 
     <script>
@@ -175,22 +208,6 @@
                 document.getElementById(target).classList.add('active');
             });
         });
-
-        // Generar productos dinámicamente
-        function createProducts(products) {
-            return products.map(product => `
-                <div class="col-md-2">
-                    <div class="card">
-                        <img src="${product.img}" alt="${product.name}">
-                        <div class="card-body">
-                            <h5 class="card-title">${product.name}</h5>
-                            <p class="card-text">${product.desc}</p>
-                            <a href="#" class="btn btn-category">Comprar</a>
-                        </div>
-                    </div>
-                </div>
-            `).join('');
-        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
