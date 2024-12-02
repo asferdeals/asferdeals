@@ -9,125 +9,156 @@
         body {
             font-family: Arial, sans-serif;
         }
+        .navbar {
+            background-color: #ff5733; /* Color llamativo para la barra de menú */
+            padding: 20px;
+            font-size: 18px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        .navbar-brand {
+            font-size: 28px;
+            font-weight: bold;
+            color: white !important;
+        }
+        .nav-link {
+            color: white !important;
+            margin-right: 20px;
+            font-weight: bold;
+        }
+        .nav-link:hover {
+            color: #ffd700 !important;
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        header {
+            background: linear-gradient(135deg, #ff5733, #ffd700);
+            color: white;
+            text-align: center;
+            padding: 50px 20px;
+            border-bottom: 5px solid #ff4500;
+        }
+        header h1 {
+            font-size: 48px;
+            animation: fadeInDown 1s ease-in-out;
+        }
+        header p {
+            font-size: 20px;
+            animation: fadeIn 2s ease-in-out;
+        }
         .hidden {
             display: none;
         }
         .category-section {
             margin-top: 20px;
         }
+        .btn-category {
+            background-color: #ff4500;
+            color: white;
+            border-radius: 5px;
+            font-weight: bold;
+            margin-top: 15px;
+        }
+        .btn-category:hover {
+            background-color: #ffd700;
+            color: black;
+            transform: scale(1.1);
+            transition: all 0.3s ease-in-out;
+        }
+        footer {
+            margin-top: 50px;
+        }
+        /* Animations */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">ASFERDEALS</a>
+            <a class="navbar-brand" href="#">ASFERDEALS 🛒</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active category-link" href="#" data-category="audio">Audio</a>
+                        <a class="nav-link active category-link" href="#" data-category="audio">🎧 Audio</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link category-link" href="#" data-category="casa">Casa</a>
+                        <a class="nav-link category-link" href="#" data-category="casa">🏡 Casa</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link category-link" href="#" data-category="herramientas">Herramientas</a>
+                        <a class="nav-link category-link" href="#" data-category="herramientas">🛠️ Herramientas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="moda">👗 Moda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="tecnologia">💻 Tecnología</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="juguetes">🧸 Juguetes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="deportes">⚽ Deportes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link category-link" href="#" data-category="salud">💊 Salud</a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <header class="bg-primary text-white text-center py-5">
-        <h1>Bienvenidos a ASFERDEALS</h1>
-        <p class="lead">Explora las mejores ofertas y productos organizados por categorías</p>
+    <header>
+        <h1>🌟 ¡Bienvenidos a ASFERDEALS! 🌟</h1>
+        <p>🎯 Encuentra las **mejores ofertas** en productos de Amazon. Todo organizado por categorías para facilitar tu compra. 💡</p>
+        <p>🛒 **Aprovecha los descuentos de hoy** y equipa tu vida con los productos más destacados. 🔥</p>
     </header>
 
     <div class="container my-5">
-        <!-- Categoría: Audio -->
+        <!-- Categorías -->
         <div class="row category-section" id="audio">
-            <h2>Productos de Audio</h2>
+            <h2>🎧 Productos de Audio</h2>
+            <!-- Ejemplo de producto -->
             <div class="col-md-4">
                 <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Audio 1">
+                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Audio">
                     <div class="card-body">
                         <h5 class="card-title">Audífonos Bluetooth</h5>
-                        <p class="card-text">Disfruta de música con calidad superior.</p>
-                        <a href="[Tu enlace de afiliado]" class="btn btn-primary">Ver en Amazon</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Audio 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Parlante Portátil</h5>
-                        <p class="card-text">Lleva tu música a todas partes.</p>
-                        <a href="[Tu enlace de afiliado]" class="btn btn-primary">Ver en Amazon</a>
+                        <p class="card-text">🎵 Calidad de sonido superior para tu día a día.</p>
+                        <a href="[Tu enlace de afiliado]" class="btn btn-category">Ver en Amazon</a>
                     </div>
                 </div>
             </div>
         </div>
 
-        <!-- Categoría: Casa -->
-        <div class="row category-section hidden" id="casa">
-            <h2>Productos para el Hogar</h2>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Casa 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Organizador de Cocina</h5>
-                        <p class="card-text">Mantén tu cocina ordenada con este práctico organizador.</p>
-                        <a href="[Tu enlace de afiliado]" class="btn btn-primary">Ver en Amazon</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Casa 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Lámpara Inteligente</h5>
-                        <p class="card-text">Controla la iluminación de tu hogar desde tu teléfono.</p>
-                        <a href="[Tu enlace de afiliado]" class="btn btn-primary">Ver en Amazon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
+        <!-- Más secciones aquí (Casa, Herramientas, etc.) -->
 
-        <!-- Categoría: Herramientas -->
-        <div class="row category-section hidden" id="herramientas">
-            <h2>Herramientas</h2>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Herramientas 1">
-                    <div class="card-body">
-                        <h5 class="card-title">Taladro Inalámbrico</h5>
-                        <p class="card-text">Realiza trabajos de bricolaje fácilmente.</p>
-                        <a href="[Tu enlace de afiliado]" class="btn btn-primary">Ver en Amazon</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="card">
-                    <img src="https://via.placeholder.com/300" class="card-img-top" alt="Producto Herramientas 2">
-                    <div class="card-body">
-                        <h5 class="card-title">Caja de Herramientas</h5>
-                        <p class="card-text">Guarda tus herramientas organizadas.</p>
-                        <a href="[Tu enlace de afiliado]" class="btn btn-primary">Ver en Amazon</a>
-                    </div>
-                </div>
-            </div>
-        </div>
     </div>
 
     <footer class="bg-dark text-white text-center py-3">
-        <p>&copy; 2024 ASFERDEALS. Todos los derechos reservados.</p>
+        <p>&copy; 2024 ASFERDEALS 🛒 | Todos los derechos reservados.</p>
+        <p>💌 Síguenos para más ofertas increíbles y actualizaciones diarias. 🎉</p>
     </footer>
 
     <script>
-        // JavaScript para manejar las categorías
         const categoryLinks = document.querySelectorAll('.category-link');
         const sections = document.querySelectorAll('.category-section');
 
