@@ -56,9 +56,12 @@
             display: none;
         }
         .category-section.active {
-            display: block;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
         }
         .card {
+            width: 18%;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
             margin-bottom: 20px;
         }
@@ -90,7 +93,6 @@
             color: #f1c40f;
             text-align: center;
             padding: 20px 0;
-            position: relative;
             margin-top: 30px;
         }
     </style>
@@ -130,7 +132,7 @@
     </header>
 
     <div class="container my-5">
-        <!-- Electrónica -->
+        <!-- Categoría Electrónica -->
         <div class="row category-section" id="electronics">
             <h2>💻 Electrónica</h2>
             <div class="col-md-2">
@@ -186,16 +188,15 @@
         </div>
 
         <!-- Más categorías -->
-        <!-- Repite estructura de Electrónica para Moda, Hogar, Fitness y Belleza -->
+        <!-- Copia la estructura de Electrónica y cambia los productos, descripciones e imágenes -->
     </div>
 
     <footer>
-        <p>🔗 Encuentra más ofertas exclusivas con nosotros. 💳</p>
         <p>&copy; 2024 ASFERDEALS | Todos los derechos reservados.</p>
+        <p>🔗 Encuentra más ofertas exclusivas con nosotros. 💳</p>
     </footer>
 
     <script>
-        // Mostrar secciones de categorías
         const links = document.querySelectorAll('.category-link');
         const sections = document.querySelectorAll('.category-section');
 
