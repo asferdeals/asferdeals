@@ -16,9 +16,10 @@
             padding: 20px;
         }
         .navbar-brand {
-            font-size: 28px;
+            font-size: 30px;
             font-weight: bold;
             color: #f1c40f !important;
+            font-family: 'Verdana', sans-serif;
         }
         .nav-link {
             color: #f1c40f !important;
@@ -30,6 +31,11 @@
             transform: scale(1.1);
             transition: all 0.3s ease-in-out;
         }
+        .navbar-toggler-icon {
+            background-color: #f1c40f;
+            padding: 5px;
+            border-radius: 5px;
+        }
         header {
             background: linear-gradient(135deg, #1c1c1c, #f1c40f);
             color: white;
@@ -38,7 +44,9 @@
             border-bottom: 5px solid #e67e22;
         }
         header h1 {
-            font-size: 48px;
+            font-size: 50px;
+            font-weight: bold;
+            text-transform: uppercase;
         }
         header p {
             font-size: 20px;
@@ -52,6 +60,7 @@
         }
         .card {
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
         }
         .card img {
             height: 150px;
@@ -88,7 +97,7 @@
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">ASFERDEALS 🛒</a>
+            <a class="navbar-brand" href="#">ASFERDEALS 🛍️</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -115,50 +124,36 @@
     </nav>
 
     <header>
-        <h1>ASFERDEALS 🛒</h1>
-        <p>🌟 Encuentra las **mejores ofertas** organizadas por categoría. ¡Compra con confianza! 🌟</p>
+        <h1>ASFERDEALS 🛍️</h1>
+        <p>🌟 Encuentra las mejores ofertas organizadas por categoría. ¡Compra con confianza! 🌟</p>
     </header>
 
     <div class="container my-5">
         <!-- Electrónica -->
         <div class="row category-section" id="electronics">
             <h2>💻 Electrónica</h2>
-            <div class="col-md-2">
-                <div class="card">
-                    <img src="https://via.placeholder.com/150" alt="Producto">
-                    <div class="card-body">
-                        <h5 class="card-title">Laptop HP</h5>
-                        <p class="card-text">Ideal para trabajo y estudio.</p>
-                        <a href="#" class="btn btn-category">Comprar</a>
-                    </div>
-                </div>
-            </div>
-            <!-- Repite 5 productos -->
+            ${createProducts([
+                { name: "Laptop HP", desc: "Ideal para trabajo y estudio.", img: "https://via.placeholder.com/150" },
+                { name: "Audífonos Sony", desc: "Sonido de alta calidad.", img: "https://via.placeholder.com/150" },
+                { name: "Monitor 4K", desc: "Para un detalle visual impresionante.", img: "https://via.placeholder.com/150" },
+                { name: "Teclado Mecánico", desc: "Experiencia de escritura superior.", img: "https://via.placeholder.com/150" },
+                { name: "Mouse Gaming", desc: "Precisión y velocidad.", img: "https://via.placeholder.com/150" }
+            ])}
         </div>
 
         <!-- Moda -->
         <div class="row category-section" id="fashion">
             <h2>👗 Moda</h2>
-            <!-- Repite 5 productos -->
+            ${createProducts([
+                { name: "Vestido Elegante", desc: "Perfecto para eventos especiales.", img: "https://via.placeholder.com/150" },
+                { name: "Zapatos de Cuero", desc: "Estilo y comodidad.", img: "https://via.placeholder.com/150" },
+                { name: "Camisa Casual", desc: "Ideal para el día a día.", img: "https://via.placeholder.com/150" },
+                { name: "Bolso Moderno", desc: "Elegante y funcional.", img: "https://via.placeholder.com/150" },
+                { name: "Chaqueta de Invierno", desc: "Abrígate con estilo.", img: "https://via.placeholder.com/150" }
+            ])}
         </div>
 
-        <!-- Hogar -->
-        <div class="row category-section" id="home">
-            <h2>🏡 Hogar</h2>
-            <!-- Repite 5 productos -->
-        </div>
-
-        <!-- Fitness -->
-        <div class="row category-section" id="fitness">
-            <h2>🏋️‍♂️ Fitness</h2>
-            <!-- Repite 5 productos -->
-        </div>
-
-        <!-- Belleza -->
-        <div class="row category-section" id="beauty">
-            <h2>💄 Belleza</h2>
-            <!-- Repite 5 productos -->
-        </div>
+        <!-- Más categorías con 5 productos cada una -->
     </div>
 
     <footer>
@@ -180,6 +175,22 @@
                 document.getElementById(target).classList.add('active');
             });
         });
+
+        // Generar productos dinámicamente
+        function createProducts(products) {
+            return products.map(product => `
+                <div class="col-md-2">
+                    <div class="card">
+                        <img src="${product.img}" alt="${product.name}">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p class="card-text">${product.desc}</p>
+                            <a href="#" class="btn btn-category">Comprar</a>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
     </script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
