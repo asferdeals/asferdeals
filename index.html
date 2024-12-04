@@ -77,40 +77,33 @@
             font-size: 20px;
         }
 
-        /* Contenido */
-        .section {
-            margin-bottom: 30px;
-        }
-        .section h2 {
-            color: #1c1c1c;
-            font-weight: bold;
-            margin-bottom: 20px;
-        }
-        .product-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .product-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 20px;
+        /* Ideas de Compras (Blog) */
+        .blog-post {
             border: 1px solid #ddd;
-            padding: 10px;
             border-radius: 5px;
             background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
-        .product-item img {
-            width: 100px;
+        .blog-post img {
+            width: 100%;
             height: auto;
-            margin-right: 20px;
+            border-radius: 5px;
         }
-        .product-item h5 {
-            font-size: 18px;
-            margin: 0;
+        .blog-post h3 {
+            margin-top: 15px;
+            font-size: 24px;
+            color: #1c1c1c;
         }
-        .product-item a {
-            margin-left: auto;
+        .blog-post p {
+            margin-top: 10px;
+            font-size: 16px;
+            line-height: 1.5;
+        }
+        .blog-post a {
+            display: inline-block;
+            margin-top: 10px;
             text-decoration: none;
             background-color: #e67e22;
             color: white;
@@ -118,30 +111,7 @@
             border-radius: 5px;
             font-weight: bold;
         }
-        .product-item a:hover {
-            background-color: #f1c40f;
-            color: black;
-        }
-
-        /* Botón flotante */
-        .scroll-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            background-color: #e67e22;
-            color: white;
-            font-size: 20px;
-            width: 50px;
-            height: 50px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-            cursor: pointer;
-            display: none;
-        }
-        .scroll-to-top:hover {
+        .blog-post a:hover {
             background-color: #f1c40f;
             color: black;
         }
@@ -171,9 +141,9 @@
         <h3>ASFERDEALS 🛍️</h3>
         <ul>
             <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#ofertas">Ofertas de Amazon</a></li>
             <li><a href="#ideas">Ideas de Compras</a></li>
             <li><a href="#cursos">Cursos Útiles</a></li>
-            <li><a href="#ofertas">Ofertas de Amazon</a></li>
         </ul>
     </div>
 
@@ -181,61 +151,26 @@
     <div class="main-content">
         <header>
             <h1>ASFERDEALS 🛍️</h1>
-            <p>🌟 Encuentra las mejores Gadges y Productos Para El hogar. ¡Compra con confianza! 🌟</p>
-            <!-- Buscador Global -->
-            <input type="text" id="search" class="form-control mt-4" placeholder="Buscar productos...">
+            <p>🌟 Encuentra las mejores ofertas organizadas por categoría. ¡Compra con confianza! 🌟</p>
         </header>
 
-        <!-- Sección de Inicio -->
-        <div class="section" id="inicio">
-            <h2>Inicio</h2>
-            <p>Bienvenido a ASFERDEALS, tu sitio de confianza para encontrar ofertas y Productos. Explora nuestras categorías y encuentra lo que necesitas.</p>
-        </div>
-
-        <!-- Sección Ofertas -->
-        <div class="section" id="ofertas">
-            <h2>Ideas De Compras</h2>
-            <ul class="product-list">
-                <li class="product-item">
-                    <img src="https://www.instagram.com/p/DDIRzWHhtdi/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==" alt="Producto 1">
-                    <h5>Samsonite Freeform Hardside Expandable with Double Spinner Wheels, Navy, 2-Piece Set</h5>
-                    <a href="https://amzn.to/3Zjsqsr" target="_blank">Ver en Amazon</a>
-                </li>
-                <li class="product-item">
-                    <img src="https://m.media-amazon.com/images/I/61k5t2KoIPL._AC_SL1500_.jpg" alt="Producto 2">
-                    <h5>Producto Oferta 2</h5>
-                    <a href="https://amzn.to/4gbrVaB" target="_blank">Ver en Amazon</a>
-                </li>
-            </ul>
-        </div>
-
-        <!-- Sección Ideas -->
+        <!-- Sección Ideas de Compras -->
         <div class="section" id="ideas">
-            <h2>Ofertas Amazon</h2>
-            <ul class="product-list">
-                <li class="product-item">
-                    <img src="https://m.media-amazon.com/images/I/71f9pIhgkaL._AC_SL1500_.jpg" alt="Idea 1">
-                    <h5>Idea de Compra 1</h5>
-                    <a href="https://amzn.to/49iEy1F" target="_blank">Ver en Amazon</a>
-                </li>
-            </ul>
-        </div>
+            <h2>Ideas de Compras</h2>
 
-        <!-- Sección Cursos -->
-        <div class="section" id="cursos">
-            <h2>Cursos Útiles</h2>
-            <ul class="product-list">
-                <li class="product-item">
-                    <img src="https://via.placeholder.com/150" alt="Curso 1">
-                    <h5>Curso Práctico 1</h5>
-                    <a href="#" target="_blank">Ver Detalles</a>
-                </li>
-            </ul>
+            <!-- Publicación de muestra -->
+            <div class="blog-post">
+                <!-- Imagen de Bocinas Bluetooth -->
+                <img src="https://m.media-amazon.com/images/I/71P2J7MMxiL._AC_SL1500_.jpg" alt="Bocinas Bluetooth">
+                <!-- Título del artículo -->
+                <h3>Bocinas Bluetooth Portátiles: La Compañera Ideal para Tus Reuniones</h3>
+                <!-- Redacción de ejemplo -->
+                <p>¿Buscas mejorar tu experiencia musical? Las bocinas Bluetooth portátiles son perfectas para llevar tu música favorita a cualquier lugar. Estas bocinas ofrecen sonido de alta calidad, conectividad rápida y una batería duradera para largas sesiones de reproducción. ¡Ideales para exteriores, picnics y reuniones familiares!</p>
+                <!-- Enlace de ejemplo -->
+                <a href="https://amzn.to/3LlD8bS" target="_blank">Ver Bocinas en Amazon</a>
+            </div>
         </div>
     </div>
-
-    <!-- Botón Flotante -->
-    <div class="scroll-to-top" id="scrollToTop">&#8593;</div>
 
     <!-- Footer -->
     <footer>
@@ -247,36 +182,5 @@
             <a href="https://tiktok.com" target="_blank">🎵 TikTok</a>
         </div>
     </footer>
-
-    <script>
-        // Mostrar el botón "Ir Arriba" al hacer scroll
-        const scrollToTopBtn = document.getElementById('scrollToTop');
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 200) {
-                scrollToTopBtn.style.display = 'flex';
-            } else {
-                scrollToTopBtn.style.display = 'none';
-            }
-        });
-
-        // Hacer scroll hacia arriba
-        scrollToTopBtn.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // Funcionalidad del buscador global
-        const searchInput = document.getElementById('search');
-        searchInput.addEventListener('input', () => {
-            const query = searchInput.value.toLowerCase();
-            const sections = document.querySelectorAll('.section');
-            sections.forEach(section => {
-                if (section.innerText.toLowerCase().includes(query)) {
-                    section.style.display = 'block';
-                } else {
-                    section.style.display = 'none';
-                }
-            });
-        });
-    </script>
 </body>
 </html>
